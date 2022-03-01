@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+/* primary colors */
+
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* secondary */
+
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-size: 13px;
+    background-color: var(--light-grayish-blue);
+}
+
+.container{
+    display: grid;
+    width: 65%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media screen and (max-width: 780px ) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 0.5rem;
+    
+}
+
+
+
+/* card-intro section */
+
+.card-intro{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.card-intro img{
+    border-radius: 50%;
+    
+}
+
+.intro-details{
+    padding-left: 0.5rem;
+}
+
+.intro-details p{
+    color: var(--white);
+}
+
+.intro-details span{
+    color: var(--white);
+    opacity: 50%;
+}
+
+/* card-content section */
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.paragraph-1{
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.paragraph-2{
+    color: var(--white);
+    opacity: 70%; 
+}
+
+/* individual cards */
+
+.card-1{
+    background-color: var(--moderate-violet);
+    grid-column: span 2;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+}
+
+.card-1 img{
+    border: 2px solid var(--very-dark-grayish-blue);
+    
+}
+
+.card-2{
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.card-3{
+    background-color: var(--white);
+}
+
+.card-3 p 
+{
+    color: var(--very-dark-blackish-blue);
+    
+}
+
+.card-3 span{
+    color: var(--very-dark-blackish-blue);
+}
+
+.card-4{
+    background-color: var(--very-dark-blackish-blue);
+    grid-column: span 2;
+}
+
+.card-4 img{
+    border: 2px solid var(--moderate-violet);
+    
+}
+
+.card-5{
+    background-color: var(--white);
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}
+
+.card-5 span{
+    color: var(--very-dark-blackish-blue);
+}
+
+.card-5 p{
+    color: var(--very-dark-blackish-blue);
+}
